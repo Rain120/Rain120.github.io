@@ -4,19 +4,23 @@
 
     
   <url>
-    <loc>https://rain120.github.io/2018/06/17/hello-world/</loc>
-    <lastmod>2018-06-17T11:22:22.984Z</lastmod>
+    <loc>https://rain120.github.io/2018/06/25/netease-slider/</loc>
+    <lastmod>2018-06-25T11:24:59.647Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
-        <pubTime>2018-06-17T11:21:50.000Z</pubTime>
+        <title>Vue之网易云音乐PC版轮播图的实现</title>
+        <pubTime>2018-06-25T10:30:29.000Z</pubTime>
         
-        <tag>test</tag>
+        <tag>Vue</tag>
+         
+        <tag>网易云音乐</tag>
+         
+        <tag>轮播图</tag>
          
          
            
              
-              <breadCrumb title="test" url="https://rain120.github.io/categories/test/"/>
+              <breadCrumb title="Vue" url="https://rain120.github.io/categories/Vue/"/>
           
         </display>
     </data>
