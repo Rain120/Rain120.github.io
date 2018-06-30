@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>https://rain120.github.io/2018/06/30/horizontal-menu/</loc>
+    <lastmod>2018-06-30T12:47:19.953Z</lastmod>
+    <data>
+        <display>
+        <title>Vue之网易云音乐横向菜单的实现</title>
+        <pubTime>2018-06-30T12:25:22.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+        <tag>better-scroll</tag>
+         
+        <tag>横向菜单</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="https://rain120.github.io/categories/Vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://rain120.github.io/2018/06/25/netease-slider/</loc>
-    <lastmod>2018-06-25T11:55:16.209Z</lastmod>
+    <lastmod>2018-06-30T12:23:07.242Z</lastmod>
     <data>
         <display>
         <title>Vue之网易云音乐PC版轮播图的实现</title>
