@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>https://rain120.github.io/2018/07/03/dataTable/</loc>
+    <lastmod>2018-07-03T09:48:12.661Z</lastmod>
+    <data>
+        <display>
+        <title>Jquery + dataTable + Bootstrap + 完整逻辑实现表格的增删改查</title>
+        <pubTime>2018-07-03T09:27:42.000Z</pubTime>
+        
+        <tag>JQuery</tag>
+         
+        <tag>Bootstrap</tag>
+         
+        <tag>dataTable</tag>
+         
+         
+           
+             
+              <breadCrumb title="dataTable" url="https://rain120.github.io/categories/dataTable/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://rain120.github.io/2018/06/30/horizontal-menu/</loc>
-    <lastmod>2018-06-30T12:51:08.418Z</lastmod>
+    <lastmod>2018-06-30T12:57:09.166Z</lastmod>
     <data>
         <display>
         <title>Vue之网易云音乐横向菜单的实现</title>
