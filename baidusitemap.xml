@@ -4,38 +4,16 @@
 
     
   <url>
-    <loc>https://rain120.github.io/2018/07/03/dataTable/</loc>
-    <lastmod>2018-07-03T09:48:12.661Z</lastmod>
-    <data>
-        <display>
-        <title>Jquery + dataTable + Bootstrap + 完整逻辑实现表格的增删改查</title>
-        <pubTime>2018-07-03T09:27:42.000Z</pubTime>
-        
-        <tag>JQuery</tag>
-         
-        <tag>Bootstrap</tag>
-         
-        <tag>dataTable</tag>
-         
-         
-           
-             
-              <breadCrumb title="dataTable" url="https://rain120.github.io/categories/dataTable/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://rain120.github.io/2018/06/30/horizontal-menu/</loc>
-    <lastmod>2018-06-30T12:57:09.166Z</lastmod>
+    <lastmod>2018-07-03T10:06:38.321Z</lastmod>
     <data>
         <display>
         <title>Vue之网易云音乐横向菜单的实现</title>
         <pubTime>2018-06-30T12:25:22.000Z</pubTime>
         
         <tag>Vue</tag>
+         
+        <tag>网易云音乐</tag>
          
         <tag>better-scroll</tag>
          
@@ -53,7 +31,7 @@
     
   <url>
     <loc>https://rain120.github.io/2018/06/25/netease-slider/</loc>
-    <lastmod>2018-06-30T12:23:07.242Z</lastmod>
+    <lastmod>2018-07-03T10:06:34.466Z</lastmod>
     <data>
         <display>
         <title>Vue之网易云音乐PC版轮播图的实现</title>
@@ -65,10 +43,36 @@
          
         <tag>轮播图</tag>
          
+        <tag>better-scroll</tag>
+         
          
            
              
               <breadCrumb title="Vue" url="https://rain120.github.io/categories/Vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://rain120.github.io/2018/07/03/dataTable/</loc>
+    <lastmod>2018-07-03T09:48:12.661Z</lastmod>
+    <data>
+        <display>
+        <title>Jquery + dataTable + Bootstrap + 完整逻辑实现表格的增删改查</title>
+        <pubTime>2018-07-03T09:27:42.000Z</pubTime>
+        
+        <tag>JQuery</tag>
+         
+        <tag>Bootstrap</tag>
+         
+        <tag>dataTable</tag>
+         
+         
+           
+             
+              <breadCrumb title="dataTable" url="https://rain120.github.io/categories/dataTable/"/>
           
         </display>
     </data>
