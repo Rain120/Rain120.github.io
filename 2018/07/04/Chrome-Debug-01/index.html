@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端调试技巧,Chrome DevTools," />
 
 
 
@@ -88,14 +88,42 @@
 
 
 
-<meta name="keywords" content="前端">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小超子的博客">
-<meta property="og:url" content="https://rain120.github.io/tags/Bootstrap/index.html">
+<meta name="description" content="转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累  因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。 此文只介绍Google的Chrome DevTools，其他浏览器大同小异，请自己探索。 官方链接 Chrome 开发者工具是">
+<meta name="keywords" content="前端调试技巧,Chrome DevTools">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chrome DevTools调试（前后端小白必备招式）-- 第一招（设备模式+元素面板）">
+<meta property="og:url" content="https://rain120.github.io/2018/07/04/Chrome-Debug-01/index.html">
 <meta property="og:site_name" content="小超子的博客">
+<meta property="og:description" content="转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累  因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。 此文只介绍Google的Chrome DevTools，其他浏览器大同小异，请自己探索。 官方链接 Chrome 开发者工具是">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-208b23639a7462b1fbf9c76b6ef7f060_hd.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-bfc20a7694def9867ad0a05fc892b92e_hd.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-96f9fd025d033c0481f994c9727e281f_hd.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-d88b71bac3ca5b12a0dd8a1128e02c25_hd.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-ad683c2c35fdc206554cdc3d16980fe1_b.gif">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-37b846101767ffae22e8d97ad1d14e87_b.gif">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-9277cde26cc1cf44415ee83cb6de745d_hd.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-0d582bda34eabdb5b44101b5205b1916_b.gif">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-846cbd18e7faa856ed9892ad08e903dc_b.gif">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-b652392bc3972e67bfec5af9289d0d13_hd.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-a340b919052b6fc3b1331573b556b7dd_b.gif">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-9d2d9264124c1eba986809a75c4ac97c_hd.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-a9e59469ba2129c37a086fc059d63038_hd.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-3a9061a2045cceba7fc34745c96bc910_b.gif">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-a808d747a8ffb338ea9e5cd4e96f9340_hd.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-d4a87a131f61f9ebd6205cb21c91bc6f_hd.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-a9badd25da1c0297f62cf0c553ea7452_b.gif">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-4f8ecbec42c642d00e5d1aaeb833331a_hd.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-8264ed62641757f34494990be791f687_b.gif">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-f364e3abba46cf5a44e9d1ad3aa003b9_hd.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-23e512805b768f2d5aacfe7ce2184828_hd.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-d9e877bfa1dcda9ee33d17cded30b169_hd.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-2b261bb1d7542a8dbb6f072b590cc722_hd.jpg">
+<meta property="og:updated_time" content="2018-07-04T14:19:30.642Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小超子的博客">
+<meta name="twitter:title" content="Chrome DevTools调试（前后端小白必备招式）-- 第一招（设备模式+元素面板）">
+<meta name="twitter:description" content="转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累  因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。 此文只介绍Google的Chrome DevTools，其他浏览器大同小异，请自己探索。 官方链接 Chrome 开发者工具是">
+<meta name="twitter:image" content="https://pic4.zhimg.com/80/v2-208b23639a7462b1fbf9c76b6ef7f060_hd.jpg">
 
 
 
@@ -125,13 +153,13 @@
 
 
 
-  <link rel="canonical" href="https://rain120.github.io/tags/Bootstrap/"/>
+  <link rel="canonical" href="https://rain120.github.io/2018/07/04/Chrome-Debug-01/"/>
 
 
 
 
 
-  <title>标签: Bootstrap | 小超子的博客</title>
+  <title>Chrome DevTools调试（前后端小白必备招式）-- 第一招（设备模式+元素面板） | 小超子的博客</title>
   
 
 
@@ -160,7 +188,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/Rain120" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -288,54 +316,368 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Bootstrap<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rain120.github.io/2018/07/04/Chrome-Debug-01/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小超子">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小超子的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/07/03/dataTable/" itemprop="url">
-              
-                <span itemprop="name">Jquery + dataTable + Bootstrap + 完整逻辑实现表格的增删改查</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Chrome DevTools调试（前后端小白必备招式）-- 第一招（设备模式+元素面板）</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-03T17:27:42+08:00"
-              content="2018-07-03" >
-          07-03
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T21:48:49+08:00">
+                2018-07-04
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Chrome-DevTools/" itemprop="url" rel="index">
+                    <span itemprop="name">Chrome DevTools</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/04/Chrome-Debug-01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/07/04/Chrome-Debug-01/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/07/04/Chrome-Debug-01/" class="leancloud_visitors" data-flag-title="Chrome DevTools调试（前后端小白必备招式）-- 第一招（设备模式+元素面板）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,379
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累</p>
+<p><img src="https://pic4.zhimg.com/80/v2-208b23639a7462b1fbf9c76b6ef7f060_hd.jpg" alt="心累"></p>
+<p>因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。</p>
+<p>此文只介绍Google的Chrome DevTools，其他浏览器大同小异，请自己探索。</p>
+<p><a href="https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn" target="_blank" rel="noopener">官方链接</a></p>
+<p>Chrome 开发者工具是一套内置于Google Chrome中的Web开发和调试工具，可用来对网站进行迭代、调试和分析。</p>
+<p>打开Chrome 开发者工具</p>
+<ul>
+<li>在页面元素上右键点击，选择 “检查”</li>
+<li>使用 快捷键 Ctrl+Shift+I (Windows) 或 Cmd+Opt+I (Mac)</li>
+</ul>
+<p><img src="https://pic1.zhimg.com/80/v2-bfc20a7694def9867ad0a05fc892b92e_hd.jpg" alt="Open"></p>
+<p>我就拿我的知乎主页来介绍吧，开发者工具打开之后</p>
+<p><img src="https://pic1.zhimg.com/80/v2-96f9fd025d033c0481f994c9727e281f_hd.jpg" alt="打开开发者工具后"></p>
+<p>我们先了解一下开发者工具的面板介绍：</p>
+<ol>
+<li>设备模式</li>
+</ol>
+<p>当你的项目是移动适配时，你可以根据这个选项设置你的设备类型，包括IPhone6/7/X等设备</p>
+<p><img src="https://pic3.zhimg.com/80/v2-d88b71bac3ca5b12a0dd8a1128e02c25_hd.jpg" alt="设备模式jpg"></p>
+<p><img src="https://pic3.zhimg.com/v2-ad683c2c35fdc206554cdc3d16980fe1_b.gif" alt="设备模式Gif"></p>
+<ol start="2">
+<li>元素面板</li>
+</ol>
+<p>你可以选择开发者工具中的左上角的那个Button，或者Windows下使用快捷键Shift+Ctrl+C</p>
+<p><img src="https://pic3.zhimg.com/v2-37b846101767ffae22e8d97ad1d14e87_b.gif" alt="元素面板"></p>
+<p>检查应用到元素的样式</p>
+<p><img src="https://pic3.zhimg.com/80/v2-9277cde26cc1cf44415ee83cb6de745d_hd.jpg" alt="Style面板"></p>
+<ol>
+<li>与元素匹配的选择器的关联样式。</li>
+<li>User Agent 样式表清晰标记，并且在网页上经常被 CSS 替换。</li>
+<li>已被级联规则替换的规则将显示为带删除线的文本。</li>
+<li>继承的样式将在“Inherited from <node>”标头下显示为一组。点击标头中的 DOM 节点可以导航到其在 DOM 树视图中的位置。 （CSS 2.1 属性表显示了哪些属性是可以继承的。）</node></li>
+<li>灰色的条目不是已定义的规则，而是在运行时计算的规则。</li>
+</ol>
+<p>如图示，当你在点击该Button时，鼠标在页面上选择任意元素，Element中会自动对齐到相应的位置，那么我们接着讲元素的其他操作<br><img src="https://pic3.zhimg.com/v2-0d582bda34eabdb5b44101b5205b1916_b.gif" alt="元素操作1"></p>
+<p>比如，我们想知道页面上这个提问按钮的颜色是什么，我想改变，但是不知道什么颜色好看呀，我可以在页面上边看效果，边确认自己的想法<br><img src="https://pic4.zhimg.com/v2-846cbd18e7faa856ed9892ad08e903dc_b.gif" alt="元素操作2"></p>
+<p><img src="https://pic4.zhimg.com/80/v2-b652392bc3972e67bfec5af9289d0d13_hd.jpg" alt="颜色面板"></p>
+<ol>
+<li>取色器。请参阅取色器了解更多信息。</li>
+<li>当前颜色。当前值的可视表示。</li>
+<li>当前值。当前颜色的十六进制、RGBA 或 HSL 表示。</li>
+<li>调色板。请参阅调色板了解更多信息。</li>
+<li>着色和阴影选择器。</li>
+<li>色调选择器。</li>
+<li>不透明度选择器。</li>
+<li>颜色值选择器。点击可以在 RGBA、HSL 和十六进制之间切换。</li>
+<li>调色板选择器。点击可以选择不同的模板。</li>
+</ol>
+<p>接下来，我们讲讲如何查找类名及其样式，并在页面上修改</p>
+<p>比如，我们要找页面上一个叫做UserAvatar的类名，然后在页面上查看他的样式，并进行一些样式的修改</p>
+<p><img src="https://pic4.zhimg.com/v2-a340b919052b6fc3b1331573b556b7dd_b.gif" alt="查找类名UserAvatar"></p>
+<p>你可以实时的修改HTML元素和CSS样式，当然这些浏览器也会有相应的提示。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-9d2d9264124c1eba986809a75c4ac97c_hd.jpg" alt="提示"></p>
+<p>HTML元素右击可以修改相对应的属性值</p>
+<p><img src="https://pic1.zhimg.com/80/v2-a9e59469ba2129c37a086fc059d63038_hd.jpg" alt="右键菜单jpg"><br><img src="https://pic1.zhimg.com/v2-3a9061a2045cceba7fc34745c96bc910_b.gif" alt="右键菜单gif"></p>
+<p>接下来就是见名知意，大家可以自己尝试下其他的功能。</p>
+<p>在你选择到你要查看的元素后，你可以在开发者工具中看到你选择HTML，包括类名，然后你可以看到该元素类的样式<br><img src="https://pic1.zhimg.com/80/v2-a808d747a8ffb338ea9e5cd4e96f9340_hd.jpg" alt="Style面板"></p>
+<p>使用 Computed 窗格检查和编辑当前元素的框模型参数，该元素是在计算后的表现（包括margin，border，padding，这里需要理解一下盒子模型）， 框模型中的所有值均可修改，只需点击它们即可。<br><img src="https://pic4.zhimg.com/80/v2-d4a87a131f61f9ebd6205cb21c91bc6f_hd.jpg" alt="Computed面板"></p>
+<p>在 Styles 窗格中，点击您修改的文件。DevTools 会将您带到 Sources 面板，很多时候你的代码都是被压缩的状态，你可以点击左下角的{}将其进行格式化<br><img src="https://pic2.zhimg.com/v2-a9badd25da1c0297f62cf0c553ea7452_b.gif" alt="Styles -&gt; Sources"></p>
+<p>添加、启用和停用 CSS 类</p>
+<p>我们接着来看这个提问这个Button，点击 .cls 按钮可以查看与当前选定元素关联的所有 CSS 类。 从这里，您可以执行以下操作：</p>
+<ul>
+<li>启用或停用当前与元素关联的类。</li>
+<li>向元素添加新类。</li>
+</ul>
+<p><img src="https://pic1.zhimg.com/80/v2-4f8ecbec42c642d00e5d1aaeb833331a_hd.jpg" alt="添加、启用和停用 CSS 类jpg"><br><img src="https://pic4.zhimg.com/v2-8264ed62641757f34494990be791f687_b.gif" alt="添加、启用和停用 CSS 类gif"></p>
+<p>添加或移除动态样式（伪类）</p>
+<p>有的时候，我们需要查看一些伪类或者动态元素样式在触发之后的状态，例如a标签hover之后的状态,例如，我们将页面中<code>&lt;a class=&quot;AppHeader-navItem&quot; href=&quot;//www.zhihu.com/&quot;&gt;首页&lt;/a&gt;</code>在触发hover之后的颜色和字体更改为<code>color:red;font-size:20px;</code><br><img src="https://pic2.zhimg.com/80/v2-f364e3abba46cf5a44e9d1ad3aa003b9_hd.jpg" alt="添加或移除动态样式（伪类）前"><br><img src="https://pic1.zhimg.com/80/v2-23e512805b768f2d5aacfe7ce2184828_hd.jpg" alt="添加或移除动态样式（伪类）后"></p>
+<p>从图示可知，我们在选择hover之后，之前灰色的样式变成正常转态，也就是这部分样式生效了，或者右击该元素选择进行下列操作也可以实现<br><img src="https://pic2.zhimg.com/80/v2-d9e877bfa1dcda9ee33d17cded30b169_hd.jpg" alt="添加或移除动态样式（伪类）"></p>
+<p>Styles 窗格提供了一个用于向样式规则添加 color 和 background-color 声明的快捷方式。样式规则的右下角有一个由三个点组成的图标。您需要将鼠标悬停到样式规则上才能看到这个图标。这5个图标可以通过提示得知它们的作用<br><img src="https://pic1.zhimg.com/80/v2-2b261bb1d7542a8dbb6f072b590cc722_hd.jpg" alt="快速添加样式"></p>
+<p>第一招，关于设备模式以及元素面板的招式，基本上已经学完了，大家可以尝试一下，我们第二招再见</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端调试技巧/" rel="tag"><i class="fa fa-tag"></i>前端调试技巧</a>
+          
+            <a href="/tags/Chrome-DevTools/" rel="tag"><i class="fa fa-tag"></i>Chrome DevTools</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/03/dataTable/" rel="next" title="Jquery + dataTable + Bootstrap + 完整逻辑实现表格的增删改查">
+                <i class="fa fa-chevron-left"></i> Jquery + dataTable + Bootstrap + 完整逻辑实现表格的增删改查
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
+  <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #27AE60;font-size:14px;">
+            很难接受就要和你分离了<br />小哥哥，小姐姐们，常来玩啊
+        </div>
+    
+</div>
+
+    
+  </div>
   
+  <div>
+    
+      
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> 
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/07/04/Chrome-Debug-01/">Chrome DevTools调试（前后端小白必备招式）-- 第一招（设备模式+元素面板）</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 小超子 的个人博客">小超子</a></p>
+  <p><span>发布时间:</span>2018年07月04日 - 21:07</p>
+  <p><span>最后更新:</span>2018年07月04日 - 22:07</p>
+  <p><span>原始链接:</span><a href="/2018/07/04/Chrome-Debug-01/" title="Chrome DevTools调试（前后端小白必备招式）-- 第一招（设备模式+元素面板）">https://rain120.github.io/2018/07/04/Chrome-Debug-01/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://rain120.github.io/2018/07/04/Chrome-Debug-01/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+    
+  </div>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -343,6 +685,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -648,6 +1004,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -665,6 +1025,18 @@
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://rain120.github.io/2018/07/04/Chrome-Debug-01/';
+          this.page.identifier = '2018/07/04/Chrome-Debug-01/';
+          this.page.title = 'Chrome DevTools调试（前后端小白必备招式）-- 第一招（设备模式+元素面板）';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
@@ -684,6 +1056,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

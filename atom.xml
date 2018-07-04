@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rain120.github.io/"/>
-  <updated>2018-07-03T09:48:12.661Z</updated>
+  <updated>2018-07-04T14:19:30.642Z</updated>
   <id>https://rain120.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Chrome DevTools调试（前后端小白必备招式）-- 第一招（设备模式+元素面板）</title>
+    <link href="https://rain120.github.io/2018/07/04/Chrome-Debug-01/"/>
+    <id>https://rain120.github.io/2018/07/04/Chrome-Debug-01/</id>
+    <published>2018-07-04T13:48:49.000Z</published>
+    <updated>2018-07-04T14:19:30.642Z</updated>
+    
+    <content type="html"><![CDATA[<p>转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累</p><p><img src="https://pic4.zhimg.com/80/v2-208b23639a7462b1fbf9c76b6ef7f060_hd.jpg" alt="心累"></p><p>因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。</p><p>此文只介绍Google的Chrome DevTools，其他浏览器大同小异，请自己探索。</p><p><a href="https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn" target="_blank" rel="noopener">官方链接</a></p><p>Chrome 开发者工具是一套内置于Google Chrome中的Web开发和调试工具，可用来对网站进行迭代、调试和分析。</p><p>打开Chrome 开发者工具</p><ul><li>在页面元素上右键点击，选择 “检查”</li><li>使用 快捷键 Ctrl+Shift+I (Windows) 或 Cmd+Opt+I (Mac)</li></ul><p><img src="https://pic1.zhimg.com/80/v2-bfc20a7694def9867ad0a05fc892b92e_hd.jpg" alt="Open"></p><p>我就拿我的知乎主页来介绍吧，开发者工具打开之后</p><p><img src="https://pic1.zhimg.com/80/v2-96f9fd025d033c0481f994c9727e281f_hd.jpg" alt="打开开发者工具后"></p><p>我们先了解一下开发者工具的面板介绍：</p><ol><li>设备模式</li></ol><p>当你的项目是移动适配时，你可以根据这个选项设置你的设备类型，包括IPhone6/7/X等设备</p><p><img src="https://pic3.zhimg.com/80/v2-d88b71bac3ca5b12a0dd8a1128e02c25_hd.jpg" alt="设备模式jpg"></p><p><img src="https://pic3.zhimg.com/v2-ad683c2c35fdc206554cdc3d16980fe1_b.gif" alt="设备模式Gif"></p><ol start="2"><li>元素面板</li></ol><p>你可以选择开发者工具中的左上角的那个Button，或者Windows下使用快捷键Shift+Ctrl+C</p><p><img src="https://pic3.zhimg.com/v2-37b846101767ffae22e8d97ad1d14e87_b.gif" alt="元素面板"></p><p>检查应用到元素的样式</p><p><img src="https://pic3.zhimg.com/80/v2-9277cde26cc1cf44415ee83cb6de745d_hd.jpg" alt="Style面板"></p><ol><li>与元素匹配的选择器的关联样式。</li><li>User Agent 样式表清晰标记，并且在网页上经常被 CSS 替换。</li><li>已被级联规则替换的规则将显示为带删除线的文本。</li><li>继承的样式将在“Inherited from <node>”标头下显示为一组。点击标头中的 DOM 节点可以导航到其在 DOM 树视图中的位置。 （CSS 2.1 属性表显示了哪些属性是可以继承的。）</node></li><li>灰色的条目不是已定义的规则，而是在运行时计算的规则。</li></ol><p>如图示，当你在点击该Button时，鼠标在页面上选择任意元素，Element中会自动对齐到相应的位置，那么我们接着讲元素的其他操作<br><img src="https://pic3.zhimg.com/v2-0d582bda34eabdb5b44101b5205b1916_b.gif" alt="元素操作1"></p><p>比如，我们想知道页面上这个提问按钮的颜色是什么，我想改变，但是不知道什么颜色好看呀，我可以在页面上边看效果，边确认自己的想法<br><img src="https://pic4.zhimg.com/v2-846cbd18e7faa856ed9892ad08e903dc_b.gif" alt="元素操作2"></p><p><img src="https://pic4.zhimg.com/80/v2-b652392bc3972e67bfec5af9289d0d13_hd.jpg" alt="颜色面板"></p><ol><li>取色器。请参阅取色器了解更多信息。</li><li>当前颜色。当前值的可视表示。</li><li>当前值。当前颜色的十六进制、RGBA 或 HSL 表示。</li><li>调色板。请参阅调色板了解更多信息。</li><li>着色和阴影选择器。</li><li>色调选择器。</li><li>不透明度选择器。</li><li>颜色值选择器。点击可以在 RGBA、HSL 和十六进制之间切换。</li><li>调色板选择器。点击可以选择不同的模板。</li></ol><p>接下来，我们讲讲如何查找类名及其样式，并在页面上修改</p><p>比如，我们要找页面上一个叫做UserAvatar的类名，然后在页面上查看他的样式，并进行一些样式的修改</p><p><img src="https://pic4.zhimg.com/v2-a340b919052b6fc3b1331573b556b7dd_b.gif" alt="查找类名UserAvatar"></p><p>你可以实时的修改HTML元素和CSS样式，当然这些浏览器也会有相应的提示。</p><p><img src="https://pic2.zhimg.com/80/v2-9d2d9264124c1eba986809a75c4ac97c_hd.jpg" alt="提示"></p><p>HTML元素右击可以修改相对应的属性值</p><p><img src="https://pic1.zhimg.com/80/v2-a9e59469ba2129c37a086fc059d63038_hd.jpg" alt="右键菜单jpg"><br><img src="https://pic1.zhimg.com/v2-3a9061a2045cceba7fc34745c96bc910_b.gif" alt="右键菜单gif"></p><p>接下来就是见名知意，大家可以自己尝试下其他的功能。</p><p>在你选择到你要查看的元素后，你可以在开发者工具中看到你选择HTML，包括类名，然后你可以看到该元素类的样式<br><img src="https://pic1.zhimg.com/80/v2-a808d747a8ffb338ea9e5cd4e96f9340_hd.jpg" alt="Style面板"></p><p>使用 Computed 窗格检查和编辑当前元素的框模型参数，该元素是在计算后的表现（包括margin，border，padding，这里需要理解一下盒子模型）， 框模型中的所有值均可修改，只需点击它们即可。<br><img src="https://pic4.zhimg.com/80/v2-d4a87a131f61f9ebd6205cb21c91bc6f_hd.jpg" alt="Computed面板"></p><p>在 Styles 窗格中，点击您修改的文件。DevTools 会将您带到 Sources 面板，很多时候你的代码都是被压缩的状态，你可以点击左下角的{}将其进行格式化<br><img src="https://pic2.zhimg.com/v2-a9badd25da1c0297f62cf0c553ea7452_b.gif" alt="Styles -&gt; Sources"></p><p>添加、启用和停用 CSS 类</p><p>我们接着来看这个提问这个Button，点击 .cls 按钮可以查看与当前选定元素关联的所有 CSS 类。 从这里，您可以执行以下操作：</p><ul><li>启用或停用当前与元素关联的类。</li><li>向元素添加新类。</li></ul><p><img src="https://pic1.zhimg.com/80/v2-4f8ecbec42c642d00e5d1aaeb833331a_hd.jpg" alt="添加、启用和停用 CSS 类jpg"><br><img src="https://pic4.zhimg.com/v2-8264ed62641757f34494990be791f687_b.gif" alt="添加、启用和停用 CSS 类gif"></p><p>添加或移除动态样式（伪类）</p><p>有的时候，我们需要查看一些伪类或者动态元素样式在触发之后的状态，例如a标签hover之后的状态,例如，我们将页面中<code>&lt;a class=&quot;AppHeader-navItem&quot; href=&quot;//www.zhihu.com/&quot;&gt;首页&lt;/a&gt;</code>在触发hover之后的颜色和字体更改为<code>color:red;font-size:20px;</code><br><img src="https://pic2.zhimg.com/80/v2-f364e3abba46cf5a44e9d1ad3aa003b9_hd.jpg" alt="添加或移除动态样式（伪类）前"><br><img src="https://pic1.zhimg.com/80/v2-23e512805b768f2d5aacfe7ce2184828_hd.jpg" alt="添加或移除动态样式（伪类）后"></p><p>从图示可知，我们在选择hover之后，之前灰色的样式变成正常转态，也就是这部分样式生效了，或者右击该元素选择进行下列操作也可以实现<br><img src="https://pic2.zhimg.com/80/v2-d9e877bfa1dcda9ee33d17cded30b169_hd.jpg" alt="添加或移除动态样式（伪类）"></p><p>Styles 窗格提供了一个用于向样式规则添加 color 和 background-color 声明的快捷方式。样式规则的右下角有一个由三个点组成的图标。您需要将鼠标悬停到样式规则上才能看到这个图标。这5个图标可以通过提示得知它们的作用<br><img src="https://pic1.zhimg.com/80/v2-2b261bb1d7542a8dbb6f072b590cc722_hd.jpg" alt="快速添加样式"></p><p>第一招，关于设备模式以及元素面板的招式，基本上已经学完了，大家可以尝试一下，我们第二招再见</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pic4.zh
+      
+    
+    </summary>
+    
+      <category term="Chrome DevTools" scheme="https://rain120.github.io/categories/Chrome-DevTools/"/>
+    
+    
+      <category term="前端调试技巧" scheme="https://rain120.github.io/tags/%E5%89%8D%E7%AB%AF%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="Chrome DevTools" scheme="https://rain120.github.io/tags/Chrome-DevTools/"/>
+    
+  </entry>
   
   <entry>
     <title>Jquery + dataTable + Bootstrap + 完整逻辑实现表格的增删改查</title>
@@ -70,9 +98,9 @@
     
       <category term="Vue" scheme="https://rain120.github.io/tags/Vue/"/>
     
-      <category term="网易云音乐" scheme="https://rain120.github.io/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
-    
       <category term="better-scroll" scheme="https://rain120.github.io/tags/better-scroll/"/>
+    
+      <category term="网易云音乐" scheme="https://rain120.github.io/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
     
       <category term="横向菜单" scheme="https://rain120.github.io/tags/%E6%A8%AA%E5%90%91%E8%8F%9C%E5%8D%95/"/>
     
@@ -102,11 +130,11 @@
     
       <category term="Vue" scheme="https://rain120.github.io/tags/Vue/"/>
     
+      <category term="better-scroll" scheme="https://rain120.github.io/tags/better-scroll/"/>
+    
       <category term="网易云音乐" scheme="https://rain120.github.io/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
     
       <category term="轮播图" scheme="https://rain120.github.io/tags/%E8%BD%AE%E6%92%AD%E5%9B%BE/"/>
-    
-      <category term="better-scroll" scheme="https://rain120.github.io/tags/better-scroll/"/>
     
   </entry>
   
