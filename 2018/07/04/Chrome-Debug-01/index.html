@@ -88,13 +88,13 @@
 
 
 
-<meta name="description" content="转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累  因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。 此文只介绍Google的Chrome DevTools，其他浏览器大同小异，请自己探索。 官方链接 Chrome 开发者工具是">
+<meta name="description" content="转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累  因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。 此文只介绍Google的Chrome DevTools，其他浏览器大同小异，请自己探索。 官方链接 Chrome 开发者工具">
 <meta name="keywords" content="前端调试技巧,Chrome DevTools">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Chrome DevTools调试（前后端小白必备招式）-- 第一招（设备模式+元素面板）">
 <meta property="og:url" content="https://rain120.github.io/2018/07/04/Chrome-Debug-01/index.html">
 <meta property="og:site_name" content="小超子的博客">
-<meta property="og:description" content="转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累  因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。 此文只介绍Google的Chrome DevTools，其他浏览器大同小异，请自己探索。 官方链接 Chrome 开发者工具是">
+<meta property="og:description" content="转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累  因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。 此文只介绍Google的Chrome DevTools，其他浏览器大同小异，请自己探索。 官方链接 Chrome 开发者工具">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://pic4.zhimg.com/80/v2-208b23639a7462b1fbf9c76b6ef7f060_hd.jpg">
 <meta property="og:image" content="https://pic1.zhimg.com/80/v2-bfc20a7694def9867ad0a05fc892b92e_hd.jpg">
@@ -119,10 +119,10 @@
 <meta property="og:image" content="https://pic1.zhimg.com/80/v2-23e512805b768f2d5aacfe7ce2184828_hd.jpg">
 <meta property="og:image" content="https://pic2.zhimg.com/80/v2-d9e877bfa1dcda9ee33d17cded30b169_hd.jpg">
 <meta property="og:image" content="https://pic1.zhimg.com/80/v2-2b261bb1d7542a8dbb6f072b590cc722_hd.jpg">
-<meta property="og:updated_time" content="2018-07-04T14:19:30.642Z">
+<meta property="og:updated_time" content="2018-07-04T14:23:23.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chrome DevTools调试（前后端小白必备招式）-- 第一招（设备模式+元素面板）">
-<meta name="twitter:description" content="转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累  因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。 此文只介绍Google的Chrome DevTools，其他浏览器大同小异，请自己探索。 官方链接 Chrome 开发者工具是">
+<meta name="twitter:description" content="转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累  因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。 此文只介绍Google的Chrome DevTools，其他浏览器大同小异，请自己探索。 官方链接 Chrome 开发者工具">
 <meta name="twitter:image" content="https://pic4.zhimg.com/80/v2-208b23639a7462b1fbf9c76b6ef7f060_hd.jpg">
 
 
@@ -471,7 +471,14 @@
       
 
       
-        <p>转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累</p>
+        <!-- 
+[知乎](https://www.zhihu.com/people/yan-yang-nian-hua-120/activities)
+
+[个人博客](https://rain120.github.io/)
+
+[Github](https://github.com/Rain120)
+ -->
+<p>转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累</p>
 <p><img src="https://pic4.zhimg.com/80/v2-208b23639a7462b1fbf9c76b6ef7f060_hd.jpg" alt="心累"></p>
 <p>因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。</p>
 <p>此文只介绍Google的Chrome DevTools，其他浏览器大同小异，请自己探索。</p>
@@ -1077,6 +1084,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '61crAwX1xmifqi9TEbNc98Rq-gzGzoHsz',
+        appKey: 'Qfvs4D8ausLIWxWRYHDh57JA',
+        placeholder: '小美女，小帅哥，快来聊天啊！！',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

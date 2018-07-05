@@ -451,10 +451,11 @@
       
         
           
-          转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累
+          
+转眼就毕业了，大家都各奔前程，同学有走读研，有走后端，有走测试，前端就我一个人了，所以肩负起那些走南闯北的同学的希望，解决他们遇到的前端Bug问题，然后发现好多同学都不会借助浏览器调试找出问题的所在，超级心累
 
 因此留下这篇日志，为了方便我前端小白的那些同学更快解决问题。
-此文只介绍Google的C
+此文只介绍Google的
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1500,6 +1501,28 @@ Demo代码：Demo代码
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '61crAwX1xmifqi9TEbNc98Rq-gzGzoHsz',
+        appKey: 'Qfvs4D8ausLIWxWRYHDh57JA',
+        placeholder: '小美女，小帅哥，快来聊天啊！！',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
