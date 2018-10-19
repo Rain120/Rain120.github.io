@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>https://rain120.github.io/2018/10/19/vue-deploy-githug-page/</loc>
+    <lastmod>2018-10-19T15:44:36.220Z</lastmod>
+    <data>
+        <display>
+        <title>Vue项目从无到有的部署上Github page</title>
+        <pubTime>2018-10-19T15:39:56.000Z</pubTime>
+        
+        <tag>Github Pages</tag>
+         
+        <tag>Vue部署</tag>
+         
+        <tag>编程</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://rain120.github.io/2018/10/05/javascript-regexp/</loc>
     <lastmod>2018-10-05T16:29:48.772Z</lastmod>
     <data>
@@ -34,9 +55,9 @@
         <title>前端面试之你可能会遇到的编程题(1)</title>
         <pubTime>2018-08-21T14:13:21.000Z</pubTime>
         
-        <tag>前端笔试、面试题</tag>
-         
         <tag>编程</tag>
+         
+        <tag>前端笔试、面试题</tag>
          
          
            
