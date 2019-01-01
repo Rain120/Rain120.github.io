@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rain120.github.io/"/>
-  <updated>2018-10-19T15:44:36.220Z</updated>
+  <updated>2018-10-05T16:29:48.772Z</updated>
   <id>https://rain120.github.io/</id>
   
   <author>
@@ -15,37 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Vue项目从无到有的部署上Github page</title>
-    <link href="https://rain120.github.io/2018/10/19/vue-deploy-githug-page/"/>
-    <id>https://rain120.github.io/2018/10/19/vue-deploy-githug-page/</id>
-    <published>2018-10-19T15:39:56.000Z</published>
-    <updated>2018-10-19T15:44:36.220Z</updated>
-    
-    <content type="html"><![CDATA[<!-- [知乎](https://www.zhihu.com/people/yan-yang-nian-hua-120/activities)[个人博客](https://rain120.github.io/)[Github](https://github.com/Rain120) --><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul><li>Nodejs安装</li></ul><p><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Node官网下载</a><br><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668c933cfd5c7e0?w=1559&amp;h=770&amp;f=png&amp;s=121790" alt="下载页面"></p><p>建议安装在非系统盘的英文目录下</p><p><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668c970dca6d72b?w=428&amp;h=250&amp;f=png&amp;s=14032" alt="查看版本"></p><p><code>Node</code>环境配置</p><p>新建文件夹 — <code>node_cache</code> 和 <code>node_global</code>(<code>npm install -g package-name</code>)</p><p><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668c9a675e657ba?w=1096&amp;h=478&amp;f=png&amp;s=66982" alt="新建文件夹"></p><p>创建完文件后，需要更改 <code>npmrc</code> 中的 <code>perfix</code> 和 <code>cache</code><br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm<span class="built_in"> config </span><span class="builtin-name">set</span><span class="built_in"> prefix </span><span class="string">"E:\Program Files (x86)\Nodejs\node_global"</span></span><br><span class="line">npm<span class="built_in"> config </span><span class="builtin-name">set</span> cache <span class="string">"E:\Program Files (x86)\Nodejs\node_cache"</span></span><br></pre></td></tr></table></figure></p><p>你需要替换你的安装目录</p><ul><li>Vue-cli安装<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">run</span><span class="bash"> -g vue</span></span><br><span class="line"><span class="bash">vue -V</span></span><br></pre></td></tr></table></figure></li></ul><ol><li>创建<code>Vue</code>项目<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack project-<span class="built_in">name</span></span><br></pre></td></tr></table></figure></li></ol><p><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668cc57c327240d?w=1217&amp;h=258&amp;f=png&amp;s=37423" alt="初始化项目"></p><p><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668cc612eab58e6?w=1142&amp;h=384&amp;f=png&amp;s=57814" alt="初始化项目"></p><ol start="2"><li>修改<code>Vue</code>项目配置</li></ol><p><code>config/index.js</code> –&gt; <code>build</code> –&gt; <code>assetsPublicPath</code> –&gt; <code>/</code> –&gt; <code>./</code></p><p><code>build/webpack.prod.conf.js</code> –&gt; <code>new HtmlWebpackPlugin</code> –&gt; <code>removeAttributeQuotes</code> –&gt; <code>true</code> –&gt; <code>false</code><br><code>.gitignore</code> –&gt; <code>注释/dist/</code><br><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668cd5fd4c5d7c1?w=914&amp;h=817&amp;f=png&amp;s=127782" alt="修改assetsPublicPath"><br><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668cd66b436ccb8?w=949&amp;h=874&amp;f=png&amp;s=178960" alt="修改removeAttributeQuotes"></p><p><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668ce98b65284ce?w=745&amp;h=503&amp;f=png&amp;s=48112" alt="修改.gitignore"></p><ol start="3"><li>项目打包<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">run</span><span class="bash"> build</span></span><br></pre></td></tr></table></figure></li></ol><p><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668ce43810ea0ee?w=1223&amp;h=779&amp;f=png&amp;s=108140" alt="npm run build"></p><ol start="4"><li>项目测试<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在使用http-<span class="keyword">server</span>前，需要安装 npm i -g http-<span class="keyword">server</span></span><br><span class="line">http-<span class="keyword">server</span> ./dist</span><br></pre></td></tr></table></figure></li></ol><p><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668cd108a5be0e2?w=677&amp;h=153&amp;f=png&amp;s=27830" alt="http-server ./dist"></p><ol start="5"><li>创建<code>Github</code>项目</li></ol><p><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668ccabedc34a0e?w=1218&amp;h=671&amp;f=png&amp;s=94520" alt="创建Github项目"></p><ol start="6"><li>本地<code>Vue</code>项目<code>Push</code>到<a href="https://github.com" target="_blank" rel="noopener">Github</a>官网<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">    </span><br><span class="line">git <span class="keyword">add</span><span class="bash"> .</span></span><br><span class="line"><span class="bash">    </span></span><br><span class="line"><span class="bash">git commit -m <span class="string">'init vue project'</span></span></span><br><span class="line"><span class="bash">    </span></span><br><span class="line"><span class="bash">git remote add origin git@github.com:Rain120/demo.git </span></span><br><span class="line"><span class="bash">    </span></span><br><span class="line"><span class="bash">git pull origin master --allow-unrelated-histories</span></span><br><span class="line"><span class="bash">    </span></span><br><span class="line"><span class="bash">git push -u origin master</span></span><br></pre></td></tr></table></figure></li></ol><p><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668ceb04fdd8a9e?w=685&amp;h=50&amp;f=png&amp;s=9575" alt="git init"></p><p><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668ced534ba145c?w=1016&amp;h=742&amp;f=png&amp;s=156122" alt="git add ."></p><p><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668cee33ad5485a" alt="git commit -m &#39;init vue project&#39;"></p><p><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668cf142646bffa?w=835&amp;h=636&amp;f=png&amp;s=91771" alt="git pull &amp;&amp; git push"></p><ol start="7"><li><code>Github Setting</code> – 配置<code>Github page</code></li></ol><p>Settings<br><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668ccb537300271?w=1265&amp;h=567&amp;f=png&amp;s=73363" alt="Settings"><br>Github Pages<br><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668ccba505d40f0?w=1109&amp;h=558&amp;f=png&amp;s=58842" alt="Github Pages"><br>Save Setting<br><img src="https://user-gold-cdn.xitu.io/2018/10/19/1668ccbff2c2c1c2?w=1214&amp;h=680&amp;f=png&amp;s=73071" alt="Save Setting"><br>最后可以在 <code>https://rain120.github.io/demo/dist/</code>，可以看到部署上线的效果（这个仓库我会在演示完后删掉，请自行测试）</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- [知乎](https://www.zhihu.com/people/yan-yang-nian-hua-120/activities)
-
-[个人博客](https://rain120.github.io/)
-
-[Github](https://github.com/Ra
-      
-    
-    </summary>
-    
-    
-      <category term="Github Pages" scheme="https://rain120.github.io/tags/Github-Pages/"/>
-    
-      <category term="Vue部署" scheme="https://rain120.github.io/tags/Vue%E9%83%A8%E7%BD%B2/"/>
-    
-      <category term="编程" scheme="https://rain120.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
   
   <entry>
     <title>Javascript之正则表达式的学习笔记</title>
@@ -105,9 +74,9 @@
     </summary>
     
     
-      <category term="编程" scheme="https://rain120.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="前端笔试、面试题" scheme="https://rain120.github.io/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AF%95%E3%80%81%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="编程" scheme="https://rain120.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
