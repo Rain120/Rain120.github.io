@@ -4,24 +4,20 @@
 
     
   <url>
-    <loc>https://rain120.github.io/2019/01/01/charts/</loc>
-    <lastmod>2019-01-01T05:06:04.464Z</lastmod>
+    <loc>https://rain120.github.io/2019/02/04/node-vue-nginx/</loc>
+    <lastmod>2019-02-04T10:41:30.213Z</lastmod>
     <data>
         <display>
-        <title>React+React-Route+Antd+Recharts+Excel(获取Excel数据，绘制Charts)</title>
-        <pubTime>2019-01-01T04:39:44.000Z</pubTime>
+        <title>Nginx + Node + Vue 部署初试</title>
+        <pubTime>2019-02-04T10:26:05.000Z</pubTime>
         
-        <tag>React</tag>
+        <tag>Vue</tag>
          
-        <tag>React-Route</tag>
+        <tag>Node</tag>
          
-        <tag>Antd</tag>
+        <tag>Nginx</tag>
          
-        <tag>Recharts</tag>
-         
-        <tag>Excel</tag>
-         
-        <tag>React Github Page部署</tag>
+        <tag>项目部署</tag>
          
          
            
@@ -32,12 +28,18 @@
     
   <url>
     <loc>https://rain120.github.io/2018/10/19/vue-deploy-githug-page/</loc>
-    <lastmod>2019-01-01T05:05:25.277Z</lastmod>
+    <lastmod>2019-02-04T10:33:20.029Z</lastmod>
     <data>
         <display>
-        <title></title>
-        <pubTime>2018-10-19T15:39:56.245Z</pubTime>
+        <title>Vue项目从无到有的部署上Github page</title>
+        <pubTime>2018-10-19T15:39:56.000Z</pubTime>
         
+        <tag>编程</tag>
+         
+        <tag>Github Pages</tag>
+         
+        <tag>Vue部署</tag>
+         
          
            
         </display>
