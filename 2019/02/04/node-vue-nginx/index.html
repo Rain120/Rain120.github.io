@@ -113,7 +113,7 @@
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/4/168b6edd718f5dd2?w=1879&h=523&f=png&s=1259304">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/4/168b6f689da1ce18?w=993&h=93&f=png&s=127350">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/4/168b6f689d94d399?w=742&h=721&f=png&s=102012">
-<meta property="og:updated_time" content="2019-02-04T10:41:30.213Z">
+<meta property="og:updated_time" content="2019-02-11T12:53:29.128Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx + Node + Vue 部署初试">
 <meta name="twitter:description" content="趁着爸妈做年夜饭之前，把之前做的笔记贴出来，新的一年到了，祝大家  Nginx + Node + Vue 部署初试知乎 个人博客 Github 日常学习笔记 Nginx 定义 异步框架的 Web服务器，也可以用作反向代理，负载平衡器 , HTTP缓存, 媒体流等的开源软件。它最初是一个旨在实现最高性能和稳定性的Web服务器。除了HTTP服务器功能外，NGINX还可以用作电子邮件（IMAP，POP3">
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3,871
+                  4,006
                 </span>
               
 
@@ -485,8 +485,7 @@
 <tr>
 <td>user</td>
 <td>设置nginx服务的系统使用用户</td>
-<td><code>nobody</code>(注意：此处用户如果比启动<code>Nginx</code>的用户权限低，你需要使用当前用户重启<code>Nginx</code>)<br><code>nginx -s stop</code> 关闭<code>nginx</code>-&gt; <code>nginx</code> 启动-&gt; `ps aux</td>
-<td>grep nginx`查看启动用户</td>
+<td><code>nobody</code>(注意：此处用户如果比启动<code>Nginx</code>的用户权限低，你需要使用当前用户重启<code>Nginx</code>)<br><code>nginx -s stop</code> 关闭<code>nginx</code>-&gt; <code>nginx</code> 启动-&gt; <code>ps aux 管道符 grep nginx</code>查看启动用户</td>
 </tr>
 <tr>
 <td>worker_processes</td>
@@ -496,11 +495,7 @@
 <tr>
 <td>error_log</td>
 <td>定位全局错误日志文件</td>
-<td>错误日志定义等级，[ debug \</td>
-<td>info notice \</td>
-<td>warn \</td>
-<td>error \</td>
-<td>crit ]，debug输出最多，crir输出最少</td>
+<td>错误日志定义等级，[ debug , info notice , warn , error , crit ]，debug输出最多，crir输出最少</td>
 </tr>
 <tr>
 <td>pid</td>
@@ -540,13 +535,7 @@
 <tr>
 <td>use</td>
 <td>工作进程数</td>
-<td>[ epoll \</td>
-<td>/dev/poll \</td>
-<td>poll \</td>
-<td>eventport \</td>
-<td>kqueue \</td>
-<td>select \</td>
-<td>rtsig ]</td>
+<td>[ epoll , /dev/poll , poll , eventport , kqueue , select , rtsig ]</td>
 </tr>
 <tr>
 <td>multi_accept</td>
@@ -895,8 +884,17 @@
 <p><img src="https://user-gold-cdn.xitu.io/2019/2/4/168b6ebb776e68c3?w=1066&amp;h=858&amp;f=png&amp;s=1115645" alt="nginx-config"></p>
 <p>启动<code>Nginx</code></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure>
-<p>重启<code>Nginx</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+<p>重新加载修改后的<code>Nginx</code>配置文件</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">nginx</span> -s reload</span><br></pre></td></tr></table></figure>
+<p><strong><code>reload</code>和<code>resatrt</code>是两个不同的概念。</strong></p>
+<ol>
+<li><code>reload</code> 重新加载<code>conf</code>文件，不中断<code>Nginx</code>服务，<code>conf</code>文件有问题则加载上一次的<code>conf</code>.</li>
+<li><code>restart</code> 会根据配置文件，重启整个<code>Nginx</code>服务，造成服务器中断一段时间，当然会因为<code>conf</code>文件问题报错。</li>
+</ol>
+<p>作者：Rain120</p>
+<p>链接：<a href="https://juejin.im/post/5c57c8be6fb9a049e55411e7" target="_blank" rel="noopener">https://juejin.im/post/5c57c8be6fb9a049e55411e7</a></p>
+<p>来源：掘金</p>
+<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>关闭<code>Nginx</code></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s stop</span><br></pre></td></tr></table></figure>
 <p>因为我已经启动了，所以就重启一下<code>Nginx</code>即可</p>
@@ -1086,7 +1084,7 @@
   <p><span>本文标题:</span><a href="/2019/02/04/node-vue-nginx/">Nginx + Node + Vue 部署初试</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 小超子 的个人博客">小超子</a></p>
   <p><span>发布时间:</span>2019年02月04日 - 18:02</p>
-  <p><span>最后更新:</span>2019年02月04日 - 18:02</p>
+  <p><span>最后更新:</span>2019年02月11日 - 20:02</p>
   <p><span>原始链接:</span><a href="/2019/02/04/node-vue-nginx/" title="Nginx + Node + Vue 部署初试">https://rain120.github.io/2019/02/04/node-vue-nginx/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://rain120.github.io/2019/02/04/node-vue-nginx/"  aria-label="复制成功！"></i></span>
   </p>
@@ -1339,7 +1337,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">18.2k</span>
+    <span title="Site words total count">18.4k</span>
   
 </div>
 
@@ -1359,7 +1357,7 @@
 <!--
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共18.2k字</span>
+  <span class="post-count">博客全站共18.4k字</span>
 </div>
 <span class="post-meta-divider">|</span>
 -->
